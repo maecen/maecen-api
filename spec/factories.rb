@@ -16,5 +16,10 @@ FactoryGirl.define do
   factory :project do
     title {Faker::Book.title}
     description {Faker::Lorem.sentence}
+    cost 800
+
+    factory :invalid_project do
+      cost 700.6
+    end
   end
 end
