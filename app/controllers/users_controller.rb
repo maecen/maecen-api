@@ -6,9 +6,8 @@ class UsersController < ApplicationController
     render :json => @users
   end
 
-  def new
-  end
-
-  def create
+  def show
+    @user = User.find(params[:id])
+    render json: @user
   end
 end
