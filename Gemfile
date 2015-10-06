@@ -15,6 +15,11 @@ gem 'devise'
 gem 'omniauth'
 gem 'devise_token_auth'
 
+gem 'pundit', '1.0.1'
+gem 'rolify', '4.1.1'
+
+gem 'faker'
+
 gem 'unicorn'
 
 group :development, :test do
