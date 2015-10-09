@@ -5,11 +5,11 @@ class ProjectsController < ApplicationController
   def index
     @projects = Project.all
 
-    render json: @projects
+    json_response @projects
   end
 
   def show
-    render json: @project
+    json_response @project
   end
 
   def create
@@ -18,14 +18,14 @@ class ProjectsController < ApplicationController
     authorize @project
 
     if @project.save
-      render json: @project, status: :created, location: @project
+      json_response @project, status: :created, location: @project
     else
       render json: @project.errors, status: :unprocessable_entity
     end
   end
 
   def update
-    @project = Project.find(params[:id])
+    authorize @project
 
     if @project.update(project_params)
       head :no_content
@@ -35,6 +35,8 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
+    authorize @project
+
     @project.destroy
 
     head :no_content
@@ -47,6 +49,10 @@ class ProjectsController < ApplicationController
   end
 
   def project_params
-    params.require(:project).permit(:title, :description)
+    params.require(:project).permit(:title, :description, :cost)
+  end
+
+  def verified_relations
+    %w(creatives subscribers)
   end
 end

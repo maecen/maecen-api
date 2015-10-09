@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  #before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @users = User.all
@@ -9,5 +9,19 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     render json: @user
+  end
+
+  def update
+    if @user.update user_params
+      head :no_content
+    else
+      render json: @user.errors, status: :unprocessable_entity
+    end
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:name,:nickname,:email,:phone_number)
   end
 end

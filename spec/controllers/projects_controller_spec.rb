@@ -10,7 +10,7 @@ RSpec.describe ProjectsController, type: :controller do
   }
 
   let(:invalid_attributes) {
-    attributes_for(:project).except(:title)
+    attributes_for(:invalid_project)
   }
 
   # This should return the minimal set of values that should be in the session
@@ -73,6 +73,7 @@ RSpec.describe ProjectsController, type: :controller do
 
       it "updates the requested project" do
         project = Project.create! valid_attributes
+        @resource.projects << project
         put :update, {:id => project.to_param, :project => new_attributes}, valid_session
         project.reload
         expect(project.title).to eq new_attributes[:title]
@@ -92,14 +93,32 @@ RSpec.describe ProjectsController, type: :controller do
         expect(assigns(:project)).to eq(project)
       end
     end
+
+    context "without authorisation" do
+      it "denies access" do
+        project = Project.create! valid_attributes
+        sign_in create(:creative)
+        put :update, {:id => project.to_param, :project => valid_attributes}, valid_session
+        expect(response).to have_http_status :unauthorized
+      end
+    end
   end
 
   describe "DELETE #destroy" do
     it "destroys the requested project" do
       project = Project.create! valid_attributes
+      @resource.projects << project
       expect {
         delete :destroy, {:id => project.to_param}, valid_session
       }.to change(Project, :count).by(-1)
+    end
+    context "without authorisation" do
+      it "denies access" do
+        project = Project.create! valid_attributes
+        sign_in create(:creative)
+        delete :destroy, {:id => project.to_param}, valid_session
+        expect(response).to have_http_status :unauthorized
+      end
     end
   end
 
