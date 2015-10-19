@@ -23,6 +23,8 @@ gem 'faker'
 gem 'unicorn'
 gem 'rack-cors', require: 'rack/cors'
 
+gem 'apipie-rails', github: 'Apipie/apipie-rails', ref: '928bd858fd14ec67eeb9483ba0d43b3be8339608'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'factory_girl_rails'

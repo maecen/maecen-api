@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/Apipie/apipie-rails.git
+  revision: 928bd858fd14ec67eeb9483ba0d43b3be8339608
+  ref: 928bd858fd14ec67eeb9483ba0d43b3be8339608
+  specs:
+    apipie-rails (0.3.4)
+      json
+
+GIT
   remote: https://github.com/rails-api/active_model_serializers.git
   revision: d02cd30fe55a3ea85e1d351b6e039620903c1871
   specs:
@@ -171,6 +179,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers!
+  apipie-rails!
   database_cleaner
   devise
   devise_token_auth
