@@ -2,7 +2,7 @@ class V1::UsersController < V1::BaseController
   before_action :authenticate_user!, except: [:index, :show]
 
   resource_description do
-    desc "We're using devise_token_auth for creating and authenticating users. See https://github.com/lynndylanhurley/devise_token_auth#usage-tldr for documentation."
+    desc "We're using devise_token_auth for creating and authenticating users. See https://github.com/lynndylanhurley/devise_token_auth#usage-tldr for documentation. The paths are nested at /v1/auth/."
   end
 
   def_param_group :user do
