@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ProjectsController, type: :controller do
+RSpec.describe V1::ProjectsController, type: :controller do
 
   # This should return the minimal set of attributes required to create a valid
   # Project. As you add validations to Project, be sure to

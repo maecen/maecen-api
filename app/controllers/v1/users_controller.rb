@@ -21,7 +21,7 @@ class V1::UsersController < V1::BaseController
   end
 
   api! 'Show a specific user'
-  param :id, Integer, required:true
+  param :id, String, required:true
   def show
     @user = User.find(params[:id])
     render json: @user

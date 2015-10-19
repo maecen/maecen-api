@@ -32,7 +32,7 @@ class V1::ProjectsController < V1::BaseController
     authorize @project
 
     if @project.save
-      json_response @project, status: :created, location: @project
+      json_response @project, status: :created, location: v1_project_url(@project)
     else
       render json: @project.errors, status: :unprocessable_entity
     end
@@ -69,6 +69,7 @@ class V1::ProjectsController < V1::BaseController
     params.require(:project).permit(:title, :description, :cost, :category)
   end
 
+  #overrides from ApplicationController
   def verified_relations
     %w(creatives subscribers)
   end

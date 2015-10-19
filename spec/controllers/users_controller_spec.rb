@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe UsersController, type: :controller do
+RSpec.describe V1::UsersController, type: :controller do
     before do
       @resource = create :user
 
