@@ -19,7 +19,7 @@ class V1::ProjectsController < V1::BaseController
   end
 
   api! 'Show specific project'
-  param :include, Array, in: ['creatives,subscribers'], of: String, desc:'Names of relations to include, separated by a comma.'
+  param :include, %w(creatives subscribers), desc:'Names of relations to include, separated by a comma.'
   def show
     json_response @project
   end
