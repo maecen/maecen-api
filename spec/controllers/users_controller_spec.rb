@@ -6,10 +6,6 @@ RSpec.describe UsersController, type: :controller do
 
       @auth_headers = @resource.create_new_auth_token
 
-      @token     = @auth_headers['access-token']
-      @client_id = @auth_headers['client']
-      @expiry    = @auth_headers['expiry']
-
       sign_in @resource
     end
 

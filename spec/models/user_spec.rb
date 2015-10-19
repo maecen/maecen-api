@@ -1,18 +1,18 @@
 require 'rails_helper'
 
 describe User do
-  describe '.creative?' do
-    before :each do
-      @user = create :user
-    end
+  before :each do
+    @user = create :user
+  end
 
+  describe '.creative?' do
     context 'default' do
-      it 'returns normal' do
+      it 'returns false' do
         expect(@user.creative?).to be false
       end
     end
     context 'creative' do
-      it 'returns creative' do
+      it 'returns true' do
         @user.update_attributes account_type: 'creative'
         expect(@user.creative?).to be true
       end

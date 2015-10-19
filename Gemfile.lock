@@ -91,6 +91,7 @@ GEM
     pundit (1.0.1)
       activesupport (>= 3.0.0)
     rack (1.6.4)
+    rack-cors (0.4.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.4)
@@ -178,6 +179,7 @@ DEPENDENCIES
   omniauth
   pg
   pundit (= 1.0.1)
+  rack-cors
   rails (= 4.2.4)
   rails-api
   rails_12factor

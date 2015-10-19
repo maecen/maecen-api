@@ -49,7 +49,7 @@ class ProjectsController < ApplicationController
   end
 
   def project_params
-    params.require(:project).permit(:title, :description, :cost)
+    params.require(:project).permit(:title, :description, :cost, :category)
   end
 
   def verified_relations

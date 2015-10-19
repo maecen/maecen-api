@@ -10,7 +10,7 @@ RSpec.describe ProjectsController, type: :controller do
   }
 
   let(:invalid_attributes) {
-    attributes_for(:invalid_project)
+    attributes_for :invalid_project
   }
 
   # This should return the minimal set of values that should be in the session
