@@ -27,12 +27,12 @@ class V1::ProjectsController < V1::BaseController
   api! 'Create a project'
   param_group :project
   def create
-    @project = Project.new(project_params)
+    @project = current_user.projects.new(project_params)
 
     authorize @project
 
     if @project.save
-      json_response @project, status: :created, location: v1_project_url(@project)
+      json_response @project, status: :created
     else
       render json: @project.errors, status: :unprocessable_entity
     end

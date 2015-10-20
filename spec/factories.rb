@@ -22,6 +22,7 @@ FactoryGirl.define do
 
     factory :invalid_project do
       cost 700.6
+      category 'Hippidy Hoppidy'
     end
   end
 end

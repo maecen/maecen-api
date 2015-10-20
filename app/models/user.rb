@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
 
   validates_presence_of :first_name, :last_name
   validates_presence_of :phone_number, if: :creative?
+  validates :account_type, included_in:true
+
 
   def creative?
     self.account_type == 'creative'
@@ -20,5 +22,9 @@ class User < ActiveRecord::Base
 
   def name
     self.first_name + ' ' + self.last_name
+  end
+
+  def self.valid_account_types
+    %w(creative subscriber)
   end
 end
