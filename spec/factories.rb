@@ -14,6 +14,10 @@ FactoryGirl.define do
     end
   end
 
+  factory :creative_with_projects, parent: :creative do
+    projects {[create(:project)]}
+  end
+
   factory :project do
     title {Faker::Book.title}
     description {Faker::Lorem.sentence}

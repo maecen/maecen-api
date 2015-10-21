@@ -24,7 +24,11 @@ class User < ActiveRecord::Base
     self.first_name + ' ' + self.last_name
   end
 
+  def subscribe_to(project)
+    self.subscriptions.new(project_id: project.id)
+  end
+
   def self.valid_account_types
-    %w(creative subscriber)
+    %w(normal creative)
   end
 end
