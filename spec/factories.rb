@@ -1,6 +1,11 @@
 require 'faker'
 
-FactoryGirl.define do
+FactoryGirl.define do  factory :content do
+    title "MyString"
+project_id 1
+cost 1
+  end
+
   factory :user do
     first_name {Faker::Name.first_name}
     last_name {Faker::Name.last_name}

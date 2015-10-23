@@ -1,5 +1,5 @@
 class V1::ProjectsController < V1::BaseController
-  before_action :authenticate_user!, except: :index
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_project, only: [:show, :update, :destroy]
 
   def_param_group :project do
@@ -21,8 +21,6 @@ class V1::ProjectsController < V1::BaseController
   api! 'Show specific project'
   param :include, %w(creatives subscribers), desc:'Names of relations to include, separated by a comma.'
   def show
-    authorize @project
-
     json_response @project
   end
 
