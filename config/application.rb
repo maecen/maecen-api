@@ -25,7 +25,7 @@ module Maecen
 
     config.middleware.use Rack::Cors do
       allow do
-        origins 'localhost'
+        origins '*'
         resource '*',
                  :headers => :any,
                  :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
