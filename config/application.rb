@@ -25,7 +25,7 @@ module Maecen
 
     config.middleware.use Rack::Cors do
       allow do
-        origins '*'
+        origins 'localhost, yunderboy.github.io'
         resource '*',
                  :headers => :any,
                  :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
