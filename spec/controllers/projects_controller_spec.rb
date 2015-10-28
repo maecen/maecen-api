@@ -1,3 +1,4 @@
+require 'stripe_mock'
 require 'rails_helper'
 
 RSpec.describe V1::ProjectsController, type: :controller do
@@ -17,6 +18,10 @@ RSpec.describe V1::ProjectsController, type: :controller do
   # in order to pass any filters (e.g. authentication) defined in
   # ProjectsController. Be sure to keep this updated too.
   let(:valid_session) { {} }
+
+  let(:stripe_helper) { StripeMock.create_test_helper }
+  before { StripeMock.start }
+  after { StripeMock.stop }
 
   before :each do
     @resource = create :creative

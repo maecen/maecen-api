@@ -2,8 +2,8 @@ require 'faker'
 
 FactoryGirl.define do  factory :content do
     title "MyString"
-project_id 1
-cost 1
+    project_id 1
+    cost 1
   end
 
   factory :user do
@@ -26,8 +26,11 @@ cost 1
   factory :project do
     title {Faker::Book.title}
     description {Faker::Lorem.sentence}
-    cost 800
     category {Project.valid_categories.sample}
+
+    after :build do |project|
+      project.plans = { '800': project.title.gsub(/\s+/, "") + '_800'}
+    end
 
     factory :invalid_project do
       cost 700.6

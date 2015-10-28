@@ -3,10 +3,9 @@ class V1::ProjectsController < V1::BaseController
   before_action :set_project, only: [:show, :update, :destroy]
 
   def_param_group :project do
-    param :project, Hash, action_aware:true do
+    param :project, Hash, action_aware:true, required:true do
       param :title, String, required:true
       param :description, String, required:true
-      param :cost, Integer, required:true
       param :category, Project.valid_categories, required:true
     end
   end
@@ -25,6 +24,7 @@ class V1::ProjectsController < V1::BaseController
   end
 
   api! 'Create a project'
+  description 'Only creatives can create a project.'
   param_group :project
   def create
     @project = current_user.projects.new(project_params)
@@ -66,7 +66,7 @@ class V1::ProjectsController < V1::BaseController
   end
 
   def project_params
-    params.require(:project).permit(:title, :description, :cost, :category)
+    params.require(:project).permit(:title, :description, :category)
   end
 
   #overrides from ApplicationController

@@ -11,7 +11,8 @@ class ApplicationController < ActionController::API
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) << [:first_name, :last_name, :phone_number]
+    devise_parameter_sanitizer.for(:sign_up) << [:first_name, :last_name, :phone_number, :account_type]
+    devise_parameter_sanitizer.for(:account_update) << [:first_name, :last_name, :phone_number]
   end
 
   def set_default_response_format

@@ -2,12 +2,12 @@ class V1::ContentsController < V1::BaseController
   before_action :authenticate_user!
   before_action :set_variables, only: [:show, :update, :destroy]
 
-  def index
-    amount = Subscription.where(project_id: params[:project_id], user_id: current_user.id).first.amount
-    p amount
-    @contents = Content.where("project_id = ? and cost <= ?", params[:project_id], amount)
+  after_action :verify_authorized, :except => :index
 
-    render json: @contents
+  def index
+    @contents = current_user.subscriptions.find_by_project_id(params[:project_id]).try(:available_contents)
+
+    json_response @contents
   end
 
   def show

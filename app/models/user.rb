@@ -15,7 +15,6 @@ class User < ActiveRecord::Base
   validates_presence_of :phone_number, if: :creative?
   validates :account_type, included_in:true
 
-
   def creative?
     self.account_type == 'creative'
   end

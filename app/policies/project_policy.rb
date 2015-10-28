@@ -1,9 +1,4 @@
 class ProjectPolicy < ApplicationPolicy
-  def show?
-    true
-    #Subscription.where(user_id: user.id, project_id: record.id).present?
-  end
-
   def create?
     user.creative?
   end
