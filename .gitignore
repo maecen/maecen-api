@@ -2,3 +2,6 @@
 
 # Ignore application configuration
 /config/application.yml
+/maecen
+/tmp
+/railsbox

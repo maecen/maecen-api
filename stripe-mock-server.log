@@ -1,0 +1,349 @@
+Starting stripe-mock-server service...
+Starting StripeMock server on port 4999
+/home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/handler/thin.rb:1:in `require': cannot load such file -- thin (LoadError)
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/handler/thin.rb:1:in `<top (required)>'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/handler.rb:20:in `const_get'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/handler.rb:20:in `block in get'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/handler.rb:20:in `each'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/handler.rb:20:in `inject'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/handler.rb:20:in `get'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/server.rb:290:in `server'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/server.rb:286:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/server.rb:147:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jimson-temp-0.9.5/lib/jimson/server.rb:73:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/stripe-ruby-mock-2.2.0/lib/stripe_mock/server.rb:16:in `start_new'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/stripe-ruby-mock-2.2.0/lib/stripe_mock/api/server.rb:22:in `block in spawn_server'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:123:in `call'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:123:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:93:in `block in daemonize'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:86:in `fork'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:86:in `daemonize'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:74:in `execute'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/stripe-ruby-mock-2.2.0/lib/stripe_mock/api/server.rb:19:in `spawn_server'
+	from /maecen/spec/spec_helper.rb:23:in `<top (required)>'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1280:in `require'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1280:in `block in requires='
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1280:in `each'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1280:in `requires='
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration_options.rb:109:in `block in process_options_into'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration_options.rb:108:in `each'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration_options.rb:108:in `process_options_into'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration_options.rb:21:in `configure'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:101:in `setup'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:88:in `run'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:73:in `run'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:41:in `invoke'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/exe/rspec:4:in `<top (required)>'
+	from /home/vagrant/.rbenv/versions/2.2.1/bin/rspec:23:in `load'
+	from /home/vagrant/.rbenv/versions/2.2.1/bin/rspec:23:in `<top (required)>'
+	from -e:1:in `load'
+	from -e:1:in `<main>'
+Starting stripe-mock-server service...
+Starting StripeMock server on port 4999
+/home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/handler.rb:78:in `require': cannot load such file -- rack/handler/unicorn (LoadError)
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/handler.rb:78:in `try_require'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/handler.rb:16:in `get'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/server.rb:290:in `server'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/server.rb:286:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/server.rb:147:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jimson-temp-0.9.5/lib/jimson/server.rb:73:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/stripe-ruby-mock-2.2.0/lib/stripe_mock/server.rb:16:in `start_new'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/stripe-ruby-mock-2.2.0/lib/stripe_mock/api/server.rb:22:in `block in spawn_server'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:123:in `call'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:123:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:93:in `block in daemonize'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:86:in `fork'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:86:in `daemonize'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:74:in `execute'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/stripe-ruby-mock-2.2.0/lib/stripe_mock/api/server.rb:19:in `spawn_server'
+	from /maecen/spec/spec_helper.rb:23:in `<top (required)>'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1280:in `require'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1280:in `block in requires='
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1280:in `each'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1280:in `requires='
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration_options.rb:109:in `block in process_options_into'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration_options.rb:108:in `each'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration_options.rb:108:in `process_options_into'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration_options.rb:21:in `configure'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:101:in `setup'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:88:in `run'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:73:in `run'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:41:in `invoke'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/exe/rspec:4:in `<top (required)>'
+	from /home/vagrant/.rbenv/versions/2.2.1/bin/rspec:23:in `load'
+	from /home/vagrant/.rbenv/versions/2.2.1/bin/rspec:23:in `<top (required)>'
+	from -e:1:in `load'
+	from -e:1:in `<main>'
+Starting stripe-mock-server service...
+Starting StripeMock server on port 4999
+/home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/dependencies.rb:274:in `require': cannot load such file -- rack/handler/unicorn (LoadError)
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/dependencies.rb:274:in `block in require'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/dependencies.rb:274:in `require'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/handler.rb:78:in `try_require'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/handler.rb:16:in `get'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/server.rb:290:in `server'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/server.rb:286:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/server.rb:147:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jimson-temp-0.9.5/lib/jimson/server.rb:73:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/stripe-ruby-mock-2.2.0/lib/stripe_mock/server.rb:16:in `start_new'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/stripe-ruby-mock-2.2.0/lib/stripe_mock/api/server.rb:22:in `block in spawn_server'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:123:in `call'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:123:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:93:in `block in daemonize'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:86:in `fork'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:86:in `daemonize'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:74:in `execute'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/stripe-ruby-mock-2.2.0/lib/stripe_mock/api/server.rb:19:in `spawn_server'
+	from /maecen/spec/rails_helper.rb:33:in `<top (required)>'
+	from /maecen/spec/controllers/subscriptions_controller_spec.rb:1:in `require'
+	from /maecen/spec/controllers/subscriptions_controller_spec.rb:1:in `<top (required)>'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1327:in `load'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1327:in `block in load_spec_files'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1325:in `each'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1325:in `load_spec_files'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:102:in `setup'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:88:in `run'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:73:in `run'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:41:in `invoke'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/exe/rspec:4:in `<top (required)>'
+	from /home/vagrant/.rbenv/versions/2.2.1/bin/rspec:23:in `load'
+	from /home/vagrant/.rbenv/versions/2.2.1/bin/rspec:23:in `<top (required)>'
+	from -e:1:in `load'
+	from -e:1:in `<main>'
+Starting stripe-mock-server service...
+Starting StripeMock server on port 4999
+/home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/dependencies.rb:274:in `require': cannot load such file -- rack/handler/unicorn (LoadError)
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/dependencies.rb:274:in `block in require'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/dependencies.rb:274:in `require'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/handler.rb:78:in `try_require'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/handler.rb:16:in `get'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/server.rb:290:in `server'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/server.rb:286:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/server.rb:147:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jimson-temp-0.9.5/lib/jimson/server.rb:73:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/stripe-ruby-mock-2.2.0/lib/stripe_mock/server.rb:16:in `start_new'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/stripe-ruby-mock-2.2.0/lib/stripe_mock/api/server.rb:22:in `block in spawn_server'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:123:in `call'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:123:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:93:in `block in daemonize'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:86:in `fork'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:86:in `daemonize'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:74:in `execute'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/stripe-ruby-mock-2.2.0/lib/stripe_mock/api/server.rb:19:in `spawn_server'
+	from /maecen/spec/rails_helper.rb:34:in `<top (required)>'
+	from /maecen/spec/controllers/subscriptions_controller_spec.rb:1:in `require'
+	from /maecen/spec/controllers/subscriptions_controller_spec.rb:1:in `<top (required)>'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1327:in `load'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1327:in `block in load_spec_files'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1325:in `each'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1325:in `load_spec_files'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:102:in `setup'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:88:in `run'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:73:in `run'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:41:in `invoke'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/exe/rspec:4:in `<top (required)>'
+	from /home/vagrant/.rbenv/versions/2.2.1/bin/rspec:23:in `load'
+	from /home/vagrant/.rbenv/versions/2.2.1/bin/rspec:23:in `<top (required)>'
+	from -e:1:in `load'
+	from -e:1:in `<main>'
+Starting stripe-mock-server service...
+Starting StripeMock server on port 4999
+/home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/dependencies.rb:274:in `require': cannot load such file -- rack/handler/unicorn (LoadError)
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/dependencies.rb:274:in `block in require'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/activesupport-4.2.4/lib/active_support/dependencies.rb:274:in `require'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/handler.rb:78:in `try_require'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/handler.rb:16:in `get'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/server.rb:290:in `server'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/server.rb:286:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/server.rb:147:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jimson-temp-0.9.5/lib/jimson/server.rb:73:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/stripe-ruby-mock-2.2.0/lib/stripe_mock/server.rb:16:in `start_new'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/stripe-ruby-mock-2.2.0/lib/stripe_mock/api/server.rb:22:in `block in spawn_server'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:123:in `call'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:123:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:93:in `block in daemonize'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:86:in `fork'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:86:in `daemonize'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:74:in `execute'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/stripe-ruby-mock-2.2.0/lib/stripe_mock/api/server.rb:19:in `spawn_server'
+	from /maecen/spec/rails_helper.rb:34:in `<top (required)>'
+	from /maecen/spec/controllers/subscriptions_controller_spec.rb:1:in `require'
+	from /maecen/spec/controllers/subscriptions_controller_spec.rb:1:in `<top (required)>'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1327:in `load'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1327:in `block in load_spec_files'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1325:in `each'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1325:in `load_spec_files'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:102:in `setup'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:88:in `run'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:73:in `run'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:41:in `invoke'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/exe/rspec:4:in `<top (required)>'
+	from /home/vagrant/.rbenv/versions/2.2.1/bin/rspec:23:in `load'
+	from /home/vagrant/.rbenv/versions/2.2.1/bin/rspec:23:in `<top (required)>'
+	from -e:1:in `load'
+	from -e:1:in `<main>'
+Starting stripe-mock-server service...
+Starting StripeMock server on port 4999
+/home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/handler.rb:78:in `require': cannot load such file -- rack/handler/unicorn (LoadError)
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/handler.rb:78:in `try_require'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/handler.rb:16:in `get'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/server.rb:290:in `server'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/server.rb:286:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/server.rb:147:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jimson-temp-0.9.5/lib/jimson/server.rb:73:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/stripe-ruby-mock-2.2.0/lib/stripe_mock/server.rb:16:in `start_new'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/stripe-ruby-mock-2.2.0/lib/stripe_mock/api/server.rb:22:in `block in spawn_server'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:123:in `call'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:123:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:93:in `block in daemonize'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:86:in `fork'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:86:in `daemonize'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:74:in `execute'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/stripe-ruby-mock-2.2.0/lib/stripe_mock/api/server.rb:19:in `spawn_server'
+	from /maecen/spec/spec_helper.rb:23:in `<top (required)>'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1280:in `require'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1280:in `block in requires='
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1280:in `each'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1280:in `requires='
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration_options.rb:109:in `block in process_options_into'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration_options.rb:108:in `each'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration_options.rb:108:in `process_options_into'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration_options.rb:21:in `configure'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:101:in `setup'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:88:in `run'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:73:in `run'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:41:in `invoke'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/exe/rspec:4:in `<top (required)>'
+	from /home/vagrant/.rbenv/versions/2.2.1/bin/rspec:23:in `load'
+	from /home/vagrant/.rbenv/versions/2.2.1/bin/rspec:23:in `<top (required)>'
+	from -e:1:in `load'
+	from -e:1:in `<main>'
+Starting stripe-mock-server service...
+Starting StripeMock server on port 4999
+/home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/handler.rb:78:in `require': cannot load such file -- rack/handler/unicorn (LoadError)
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/handler.rb:78:in `try_require'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/handler.rb:16:in `get'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/server.rb:290:in `server'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/server.rb:286:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rack-1.6.4/lib/rack/server.rb:147:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jimson-temp-0.9.5/lib/jimson/server.rb:73:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/stripe-ruby-mock-2.2.0/lib/stripe_mock/server.rb:16:in `start_new'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/stripe-ruby-mock-2.2.0/lib/stripe_mock/api/server.rb:22:in `block in spawn_server'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:123:in `call'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:123:in `start'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:93:in `block in daemonize'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:86:in `fork'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:86:in `daemonize'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/dante-0.2.0/lib/dante/runner.rb:74:in `execute'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/stripe-ruby-mock-2.2.0/lib/stripe_mock/api/server.rb:19:in `spawn_server'
+	from /maecen/spec/spec_helper.rb:23:in `<top (required)>'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1280:in `require'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1280:in `block in requires='
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1280:in `each'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration.rb:1280:in `requires='
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration_options.rb:109:in `block in process_options_into'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration_options.rb:108:in `each'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration_options.rb:108:in `process_options_into'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/configuration_options.rb:21:in `configure'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:101:in `setup'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:88:in `run'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:73:in `run'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/lib/rspec/core/runner.rb:41:in `invoke'
+	from /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/rspec-core-3.3.2/exe/rspec:4:in `<top (required)>'
+	from /home/vagrant/.rbenv/versions/2.2.1/bin/rspec:23:in `load'
+	from /home/vagrant/.rbenv/versions/2.2.1/bin/rspec:23:in `<top (required)>'
+	from -e:1:in `load'
+	from -e:1:in `<main>'
+Starting stripe-mock-server service...
+Starting StripeMock server on port 4999
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:4999, CTRL+C to stop
+Starting stripe-mock-server service...
+Starting StripeMock server on port 4999
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:4999, CTRL+C to stop
+Starting stripe-mock-server service...
+Starting StripeMock server on port 4999
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:4999, CTRL+C to stop
+Starting stripe-mock-server service...
+Starting StripeMock server on port 4999
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:4999, CTRL+C to stop
+Starting stripe-mock-server service...
+Starting StripeMock server on port 4999
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:4999, CTRL+C to stop
+Starting stripe-mock-server service...
+Starting StripeMock server on port 4999
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:4999, CTRL+C to stop
+Starting stripe-mock-server service...
+Starting StripeMock server on port 4999
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:4999, CTRL+C to stop
+Starting stripe-mock-server service...
+Starting StripeMock server on port 4999
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:4999, CTRL+C to stop
+Starting stripe-mock-server service...
+Starting StripeMock server on port 4999
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:4999, CTRL+C to stop
+Starting stripe-mock-server service...
+Starting StripeMock server on port 4999
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:4999, CTRL+C to stop
+Starting stripe-mock-server service...
+Starting StripeMock server on port 4999
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:4999, CTRL+C to stop
+Starting stripe-mock-server service...
+Starting StripeMock server on port 4999
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:4999, CTRL+C to stop
+Starting stripe-mock-server service...
+Starting StripeMock server on port 4999
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:4999, CTRL+C to stop
+Starting stripe-mock-server service...
+Starting StripeMock server on port 4999
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:4999, CTRL+C to stop
+Starting stripe-mock-server service...
+Starting StripeMock server on port 4999
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:4999, CTRL+C to stop
+Starting stripe-mock-server service...
+Starting StripeMock server on port 4999
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:4999, CTRL+C to stop
+Starting stripe-mock-server service...
+Starting StripeMock server on port 4999
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:4999, CTRL+C to stop
+Starting stripe-mock-server service...
+Starting StripeMock server on port 4999
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:4999, CTRL+C to stop
