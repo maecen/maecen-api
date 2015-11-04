@@ -34,7 +34,7 @@ class V1::ProjectsController < V1::BaseController
     if @project.save
       json_response @project, status: :created
     else
-      render json: @project.errors, status: :unprocessable_entity
+      render json: @project.errors.full_messages, status: :unprocessable_entity
     end
   end
 
