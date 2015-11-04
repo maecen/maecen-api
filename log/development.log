@@ -70,3 +70,339 @@ Processing by V1::ProjectsController#index as JSON
   [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "ownerships" ON "users"."id" = "ownerships"."user_id" WHERE "ownerships"."project_id" = $1[0m  [["project_id", 3]]
   [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = $1  [["project_id", 3]]
 Completed 200 OK in 135ms (Views: 108.9ms | ActiveRecord: 25.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddMoreFieldsToUsers (20151104124627)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (5.3ms)[0m  [1mALTER TABLE "users" ADD "zip_code" character varying[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ADD "country" character varying
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151104124627"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'contents'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'ownerships'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'projects'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'subscriptions'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/v1/users" for 10.0.2.2 at 2015-11-04 12:57:55 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by V1::UsersController#index as JSON
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 14]]
+  [1m[35mProject Load (2.0ms)[0m  SELECT "projects".* FROM "projects" INNER JOIN "ownerships" ON "projects"."id" = "ownerships"."project_id" WHERE "ownerships"."user_id" = $1  [["user_id", 14]]
+Completed 200 OK in 114ms (Views: 104.1ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/v1/users" for 10.0.2.2 at 2015-11-04 12:58:13 +0000
+Processing by V1::UsersController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."user_id" = $1  [["user_id", 14]]
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT "projects".* FROM "projects" INNER JOIN "ownerships" ON "projects"."id" = "ownerships"."project_id" WHERE "ownerships"."user_id" = $1[0m  [["user_id", 14]]
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/v1/users" for 10.0.2.2 at 2015-11-04 12:58:15 +0000
+Processing by V1::UsersController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 14]]
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects" INNER JOIN "ownerships" ON "projects"."id" = "ownerships"."project_id" WHERE "ownerships"."user_id" = $1  [["user_id", 14]]
+Completed 200 OK in 77ms (Views: 72.0ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/v1/users" for 10.0.2.2 at 2015-11-04 12:58:22 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by V1::UsersController#index as JSON
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 14]]
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects" INNER JOIN "ownerships" ON "projects"."id" = "ownerships"."project_id" WHERE "ownerships"."user_id" = $1  [["user_id", 14]]
+Completed 200 OK in 104ms (Views: 98.1ms | ActiveRecord: 5.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddTeaserToProjects (20151104130035)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "projects" ADD "teaser" character varying[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "projects" ADD "homepage" character varying
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151104130035"]]
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'contents'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'ownerships'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'projects'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'subscriptions'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/v1/users" for 10.0.2.2 at 2015-11-04 13:04:32 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+SyntaxError (/maecen/backend/app/models/project.rb:13: syntax error, unexpected ':', expecting =>
+  validates_length_of :description, minimum: 50, :maximum: 500
+                                                          ^
+/maecen/backend/app/models/project.rb:14: syntax error, unexpected ':', expecting =>
+  validates_length_of :teaser, minimum: 20, :maximum: 140
+                                                     ^):
+  app/models/project.rb:13: syntax error, unexpected ':', expecting =>
+  app/models/project.rb:14: syntax error, unexpected ':', expecting =>
+  app/controllers/v1/projects_controller.rb:9:in `block (2 levels) in <class:ProjectsController>'
+  app/controllers/v1/projects_controller.rb:29:in `<class:ProjectsController>'
+  app/controllers/v1/projects_controller.rb:1:in `<top (required)>'
+  app/controllers/v1/users_controller.rb:23:in `<class:UsersController>'
+  app/controllers/v1/users_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.9ms)
+  Rendered /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.2ms)
+
+
+Started GET "/v1/users" for 10.0.2.2 at 2015-11-04 13:05:13 +0000
+Processing by V1::UsersController#index as JSON
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 14]]
+  [1m[35mProject Load (0.6ms)[0m  SELECT "projects".* FROM "projects" INNER JOIN "ownerships" ON "projects"."id" = "ownerships"."project_id" WHERE "ownerships"."user_id" = $1  [["user_id", 14]]
+Completed 200 OK in 141ms (Views: 134.2ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/v1/users" for 10.0.2.2 at 2015-11-04 13:05:15 +0000
+Processing by V1::UsersController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."user_id" = $1  [["user_id", 14]]
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects" INNER JOIN "ownerships" ON "projects"."id" = "ownerships"."project_id" WHERE "ownerships"."user_id" = $1[0m  [["user_id", 14]]
+Completed 200 OK in 82ms (Views: 75.4ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/v1/projects" for 10.0.2.2 at 2015-11-04 13:05:19 +0000
+Processing by V1::ProjectsController#index as JSON
+  [1m[35mProject Load (0.6ms)[0m  SELECT "projects".* FROM "projects"
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "ownerships" ON "users"."id" = "ownerships"."user_id" WHERE "ownerships"."project_id" = $1[0m  [["project_id", 2]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = $1  [["project_id", 2]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "ownerships" ON "users"."id" = "ownerships"."user_id" WHERE "ownerships"."project_id" = $1[0m  [["project_id", 1]]
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = $1  [["project_id", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "ownerships" ON "users"."id" = "ownerships"."user_id" WHERE "ownerships"."project_id" = $1[0m  [["project_id", 3]]
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = $1  [["project_id", 3]]
+Completed 200 OK in 60ms (Views: 54.1ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/v1/projects" for 10.0.2.2 at 2015-11-04 13:06:06 +0000
+Processing by V1::ProjectsController#index as JSON
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" INNER JOIN "ownerships" ON "users"."id" = "ownerships"."user_id" WHERE "ownerships"."project_id" = $1  [["project_id", 2]]
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = $1[0m  [["project_id", 2]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" INNER JOIN "ownerships" ON "users"."id" = "ownerships"."user_id" WHERE "ownerships"."project_id" = $1  [["project_id", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = $1[0m  [["project_id", 1]]
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" INNER JOIN "ownerships" ON "users"."id" = "ownerships"."user_id" WHERE "ownerships"."project_id" = $1  [["project_id", 3]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = $1[0m  [["project_id", 3]]
+Completed 200 OK in 39ms (Views: 33.3ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/v1/projects" for 10.0.2.2 at 2015-11-04 13:06:12 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by V1::ProjectsController#index as JSON
+  [1m[35mProject Load (0.6ms)[0m  SELECT "projects".* FROM "projects"
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 2.0ms)
+
+SyntaxError (/maecen/backend/app/serializers/project_serializer.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  has_many :creatives, serializer: CreativeSerializer
+            ^):
+  app/serializers/project_serializer.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/controllers/application_controller.rb:31:in `json_response'
+  app/controllers/v1/projects_controller.rb:17:in `index'
+
+
+  Rendered /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.7ms)
+  Rendered /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.0ms)
+
+
+Started GET "/v1/projects" for 10.0.2.2 at 2015-11-04 13:06:13 +0000
+Processing by V1::ProjectsController#index as JSON
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+SyntaxError (/maecen/backend/app/serializers/project_serializer.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  has_many :creatives, serializer: CreativeSerializer
+            ^):
+  app/serializers/project_serializer.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/controllers/application_controller.rb:31:in `json_response'
+  app/controllers/v1/projects_controller.rb:17:in `index'
+
+
+  Rendered /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.7ms)
+
+
+Started GET "/v1/projects" for 10.0.2.2 at 2015-11-04 13:06:22 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by V1::ProjectsController#index as JSON
+  [1m[35mProject Load (1.0ms)[0m  SELECT "projects".* FROM "projects"
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "ownerships" ON "users"."id" = "ownerships"."user_id" WHERE "ownerships"."project_id" = $1[0m  [["project_id", 2]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = $1  [["project_id", 2]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "ownerships" ON "users"."id" = "ownerships"."user_id" WHERE "ownerships"."project_id" = $1[0m  [["project_id", 1]]
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = $1  [["project_id", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "ownerships" ON "users"."id" = "ownerships"."user_id" WHERE "ownerships"."project_id" = $1[0m  [["project_id", 3]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = $1  [["project_id", 3]]
+Completed 200 OK in 132ms (Views: 120.8ms | ActiveRecord: 9.7ms)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.4ms)[0m  INSERT INTO "projects" ("title", "description", "category", "teaser", "homepage", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["title", "Good Jammers"], ["description", "We jam so gooooooooooooooooooooooooooooooooooooooooooooooooood"], ["category", "NGO"], ["teaser", "20 characetsssssssss"], ["homepage", "google.com"], ["created_at", "2015-11-04 13:09:07.073270"], ["updated_at", "2015-11-04 13:09:07.073270"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/v1/projects" for 10.0.2.2 at 2015-11-04 13:09:20 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by V1::ProjectsController#index as JSON
+  [1m[35mProject Load (0.7ms)[0m  SELECT "projects".* FROM "projects"
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "ownerships" ON "users"."id" = "ownerships"."user_id" WHERE "ownerships"."project_id" = $1[0m  [["project_id", 2]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = $1  [["project_id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "ownerships" ON "users"."id" = "ownerships"."user_id" WHERE "ownerships"."project_id" = $1[0m  [["project_id", 1]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = $1  [["project_id", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "ownerships" ON "users"."id" = "ownerships"."user_id" WHERE "ownerships"."project_id" = $1[0m  [["project_id", 3]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = $1  [["project_id", 3]]
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "ownerships" ON "users"."id" = "ownerships"."user_id" WHERE "ownerships"."project_id" = $1[0m  [["project_id", 4]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = $1  [["project_id", 4]]
+Completed 200 OK in 159ms (Views: 145.8ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/v1/projects" for 10.0.2.2 at 2015-11-04 13:11:14 +0000
+Processing by V1::ProjectsController#index as JSON
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" INNER JOIN "ownerships" ON "users"."id" = "ownerships"."user_id" WHERE "ownerships"."project_id" = $1  [["project_id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = $1[0m  [["project_id", 2]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" INNER JOIN "ownerships" ON "users"."id" = "ownerships"."user_id" WHERE "ownerships"."project_id" = $1  [["project_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = $1[0m  [["project_id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" INNER JOIN "ownerships" ON "users"."id" = "ownerships"."user_id" WHERE "ownerships"."project_id" = $1  [["project_id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = $1[0m  [["project_id", 3]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" INNER JOIN "ownerships" ON "users"."id" = "ownerships"."user_id" WHERE "ownerships"."project_id" = $1  [["project_id", 4]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = $1[0m  [["project_id", 4]]
+Completed 200 OK in 85ms (Views: 76.8ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/v1/users" for 10.0.2.2 at 2015-11-04 13:11:18 +0000
+Processing by V1::UsersController#index as JSON
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 14]]
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects" INNER JOIN "ownerships" ON "projects"."id" = "ownerships"."project_id" WHERE "ownerships"."user_id" = $1  [["user_id", 14]]
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/v1/users" for 10.0.2.2 at 2015-11-04 13:11:27 +0000
+Processing by V1::UsersController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."user_id" = $1  [["user_id", 14]]
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects" INNER JOIN "ownerships" ON "projects"."id" = "ownerships"."project_id" WHERE "ownerships"."user_id" = $1[0m  [["user_id", 14]]
+Completed 200 OK in 89ms (Views: 83.8ms | ActiveRecord: 5.0ms)

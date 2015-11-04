@@ -12,7 +12,7 @@ class ApplicationController < ActionController::API
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) << [:first_name, :last_name, :phone_number, :account_type]
-    devise_parameter_sanitizer.for(:account_update) << [:first_name, :last_name, :phone_number]
+    devise_parameter_sanitizer.for(:account_update) << [:first_name, :last_name, :phone_number, :zip_code, :country, :nickname]
   end
 
   def set_default_response_format
@@ -20,7 +20,7 @@ class ApplicationController < ActionController::API
   end
 
   def unauthorized
-    render json: {errors: 'unauthorized'}, status: 401
+    render json: {errors: 'You do not have the correct permissions for this action'}, status: 401
   end
 
   def include_params
