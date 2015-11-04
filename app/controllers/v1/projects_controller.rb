@@ -66,7 +66,7 @@ class V1::ProjectsController < V1::BaseController
   end
 
   def project_params
-    params.require(:project).permit(:title, :description, :category)
+    params.require(:project).permit(:title, :description, :category, :teaser, :homepage)
   end
 
   #overrides from ApplicationController
