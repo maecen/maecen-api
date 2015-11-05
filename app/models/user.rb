@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   has_many :subscribed_projects, through: :subscriptions, source: :user
 
   validates_presence_of :first_name, :last_name
-  validates_presence_of :phone_number, :zip_code, :country, if: :creative?
+  validates_presence_of :phone_number, :zip_code, :country, :nickname, if: :creative?
   validates :nickname, presence: false, unless: :creative?
   validates :account_type, included_in:true
 
