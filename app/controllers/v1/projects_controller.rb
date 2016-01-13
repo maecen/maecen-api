@@ -27,7 +27,8 @@ class V1::ProjectsController < V1::BaseController
   description 'Only creatives can create a project.'
   param_group :project
   def create
-    @project = current_user.projects.new(project_params)
+    @project = Project.new(project_params)
+    @project.creatives << current_user
 
     authorize @project
 
@@ -66,7 +67,7 @@ class V1::ProjectsController < V1::BaseController
   end
 
   def project_params
-    params.require(:project).permit(:title, :description, :category, :teaser, :homepage)
+    params.require(:project).permit(:title, :description, :category, :teaser, :homepage, :cover_image)
   end
 
   #overrides from ApplicationController

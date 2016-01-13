@@ -1,15 +1,11 @@
 require "rails_helper"
 require 'route_helper'
 
-RSpec.describe ProjectsController, type: :routing do
+RSpec.describe V1::ProjectsController, type: :routing do
   describe "routing" do
 
     it "routes to #index" do
       expect(:get => "/projects").to json_route_to("projects#index")
-    end
-
-    it "routes to #new" do
-      expect(:get => "/projects/new").to json_route_to("projects#new")
     end
 
     it "routes to #show" do

@@ -1,6 +1,8 @@
 require 'faker'
 
-FactoryGirl.define do  factory :content do
+FactoryGirl.define do
+
+  factory :content do
     title "MyString"
     project_id 1
     cost 1
@@ -15,6 +17,9 @@ FactoryGirl.define do  factory :content do
 
     factory :creative do
       account_type 'creative'
+      zip_code {Faker::Address.zip_code}
+      country {Faker::Address.country}
+      nickname {Faker::Name.first_name}
       phone_number {Faker::PhoneNumber.phone_number}
     end
   end
@@ -25,8 +30,10 @@ FactoryGirl.define do  factory :content do
 
   factory :project do
     title {Faker::Book.title}
-    description {Faker::Lorem.sentence}
+    description {Faker::Lorem.sentence(25)}
+    teaser {Faker::Lorem.sentence(10)}
     category {Project.valid_categories.sample}
+    cover_image { File.open(File.join(Rails.root, '/spec/files/image.png')) }
 
     after :build do |project|
       project.plans = { '800': project.title.gsub(/\s+/, "") + '_800'}

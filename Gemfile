@@ -8,6 +8,11 @@ gem 'active_model_serializers', git: 'https://github.com/rails-api/active_model_
 gem 'pg'
 gem 'thin'
 
+# storage
+gem 'carrierwave'
+gem 'fog'
+gem 'fog-google'
+
 # authentication
 gem 'devise'
 gem 'omniauth'
@@ -43,5 +48,3 @@ end
 group :production do
   gem 'rails_12factor'
 end
-
-

@@ -15,6 +15,8 @@ class Project < ActiveRecord::Base
   validates :category, included_in: true
   #validate :create_stripe_plan, on: :create
 
+  mount_uploader :cover_image, GroupCoverUploader
+
   def create_stripe_plan
     begin
       plan = Stripe::Plan.create(
