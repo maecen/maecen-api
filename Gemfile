@@ -10,6 +10,7 @@ gem 'thin'
 
 # storage
 gem 'carrierwave'
+gem 'carrierwave-base64'
 gem 'fog'
 gem 'fog-google'
 

@@ -63,6 +63,8 @@ GEM
       activesupport (>= 3.2.0)
       json (>= 1.7)
       mime-types (>= 1.16)
+    carrierwave-base64 (2.1.1)
+      carrierwave (>= 0.8.0, < 0.11.0)
     daemons (1.2.3)
     dante (0.2.0)
     database_cleaner (1.5.0)
@@ -342,6 +344,7 @@ DEPENDENCIES
   active_model_serializers!
   apipie-rails!
   carrierwave
+  carrierwave-base64
   database_cleaner
   devise
   devise_token_auth
