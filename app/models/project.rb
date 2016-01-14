@@ -16,6 +16,7 @@ class Project < ActiveRecord::Base
   #validate :create_stripe_plan, on: :create
 
   mount_base64_uploader :cover_image, GroupCoverUploader
+  mount_base64_uploader :logo, GroupCoverUploader
 
   def create_stripe_plan
     begin
