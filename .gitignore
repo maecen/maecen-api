@@ -4,5 +4,6 @@
 /config/application.yml
 /tmp
 /log
-/.idea
 /public/uploads
+stripe-mock-server.log
+.idea
