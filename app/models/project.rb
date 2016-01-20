@@ -10,7 +10,7 @@ class Project < ActiveRecord::Base
   has_many :contents
 
   validates_presence_of :title, :description, :teaser
-  validates_length_of :description, minimum: 30, maximum: 500
+  validates_length_of :description, minimum: 30, maximum: 5000
   validates_length_of :teaser, minimum: 10, maximum: 140
   validates :category, included_in: true
   #validate :create_stripe_plan, on: :create
