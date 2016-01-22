@@ -1,0 +1,18 @@
+da:
+  activerecord:
+    attributes:
+      user:
+        first_name: 'Fornavn'
+        last_name: 'Efternavn'
+        country: 'Land'
+        zip_code: 'Postnummer'
+        phone_number: 'Telefonnummer'
+      project:
+        title: 'Titel'
+        description: 'Beskrivelse'
+    errors:
+      messages:
+        blank: 'skal udfyldes'
+        too_short: 'skal være længere end %{count}'
+        too_long: 'må ikke være længere end %{count}'
+        taken: 'er allerede taget'
