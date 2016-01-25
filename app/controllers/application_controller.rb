@@ -5,10 +5,15 @@ class ApplicationController < ActionController::API
 
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_default_response_format
+  before_action :set_locale
 
   rescue_from Pundit::NotAuthorizedError, with: :unauthorized
 
   protected
+
+  def set_locale
+    I18n.locale = request.headers['locale'] || params[:locale] || I18n.default_locale
+  end
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) << [:first_name, :last_name, :phone_number, :account_type]
