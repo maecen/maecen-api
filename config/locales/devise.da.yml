@@ -1,0 +1,5 @@
+# encoding: utf-8
+da:
+  devise_token_auth:
+    sessions:
+      bad_credentials: "Forkert login. Prøv igen."
