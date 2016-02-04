@@ -1,13 +1,12 @@
 class ProjectPolicy < ApplicationPolicy
   def create?
-    user.creative?
+    true
   end
-
   def update?
-    user.creative? and record.creatives.include?(user)
+    record.creatives.include?(user)
   end
 
   def destroy?
-    user.creative? and record.creatives.include?(user)
+    record.creatives.include?(user)
   end
 end

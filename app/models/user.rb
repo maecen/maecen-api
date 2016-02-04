@@ -11,14 +11,10 @@ class User < ActiveRecord::Base
   has_many :subscriptions
   has_many :subscribed_projects, through: :subscriptions, source: :user
 
-  validates_presence_of :first_name, :last_name
-  validates_presence_of :phone_number, :zip_code, :country, :nickname, if: :creative?
-  validates :nickname, presence: false, unless: :creative?
-  validates :account_type, included_in:true
-
-  def creative?
-    self.account_type == 'creative'
-  end
+  #validates_presence_of :first_name, :last_name
+  #validates_presence_of :phone_number, :zip_code, :country, :nickname, if: :creative?
+  #validates :nickname, presence: false, unless: :creative?
+  #validates :account_type, included_in:true
 
   def name
     self.first_name + ' ' + self.last_name
